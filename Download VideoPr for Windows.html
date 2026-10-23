@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Download VideoPr for Windows</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@600&display=swap">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#04060C;--surface:#0A1226;--ink:#EAF0FF;--muted:#93A4C4;--line:#1B2A4A;
+  --accent:#2F6BFF;--accent-ink:#FFFFFF;--c1:#2F6BFF;--c2:#5B9BFF;--c3:#1B3A8C;
+  --playhead:#9CC2FF;--track:#0E1730;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#04060C;--surface:#0A1226;--ink:#EAF0FF;--muted:#93A4C4;--line:#1B2A4A;
+    --accent:#2F6BFF;--accent-ink:#FFFFFF;--c1:#2F6BFF;--c2:#5B9BFF;--c3:#1B3A8C;
+    --playhead:#9CC2FF;--track:#0E1730;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#04060C;--surface:#0A1226;--ink:#EAF0FF;--muted:#93A4C4;--line:#1B2A4A;
+  --accent:#2F6BFF;--accent-ink:#FFFFFF;--c1:#2F6BFF;--c2:#5B9BFF;--c3:#1B3A8C;
+  --playhead:#9CC2FF;--track:#0E1730;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  font-size:1.0625rem;line-height:1.6}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.5rem}
+header{padding:1.5rem 0;font-weight:800;letter-spacing:-.01em;font-size:1.15rem}
+.hero{padding:2.5rem 0 2.5rem}
+h1{font-size:clamp(2.5rem,7vw,4.75rem);line-height:1;letter-spacing:-.035em;font-weight:800;margin:0 0 1.25rem;max-width:11ch}
+.lead{color:var(--muted);max-width:30rem;margin:0 0 2rem;font-size:1.15rem}
+.cta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem}
+.btn{display:inline-block;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:600;
+  padding:1rem 1.75rem;border-radius:.5rem;text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible,.copy:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.note{display:flex;align-items:center;gap:.4rem;margin:0;color:var(--muted);
+  font-family:Caveat,"Segoe Print","Bradley Hand",cursive;font-weight:600;font-size:1.5rem;line-height:1.1;transform:rotate(-2deg)}
+.note svg{flex:none}
+.msg{margin:1rem 0 0;color:var(--playhead);font-weight:600}
+.small{margin:1.5rem 0 0;color:var(--muted);font-size:.95rem}
+
+.timeline{position:relative;display:grid;gap:.5rem;margin:.5rem 0 3.5rem}
+.row{position:relative;height:2.75rem;background:var(--track);border-radius:.375rem}
+.clip{position:absolute;top:.25rem;bottom:.25rem;border-radius:.25rem}
+.v1 .clip{background:var(--c1)}.v2 .clip{background:var(--c2)}.a1 .clip{background:var(--c3)}
+.playhead{position:absolute;top:-.6rem;bottom:-.4rem;left:58%;width:2px;background:var(--playhead);
+  animation:sweep 2.6s cubic-bezier(.2,.7,.2,1) both}
+.playhead::before{content:"";position:absolute;top:0;left:-6px;border:7px solid transparent;border-top-color:var(--playhead);border-bottom:0}
+@keyframes sweep{from{left:0}to{left:58%}}
+@media (prefers-reduced-motion:reduce){.playhead{animation:none}}
+
+section{padding:0 0 3rem}
+h2{font-size:1.6rem;letter-spacing:-.02em;margin:0 0 1rem}
+ol{margin:0;padding-left:1.25rem;max-width:36rem}
+li{margin-bottom:.6rem;padding-left:.25rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:1.25rem 1.5rem;max-width:44rem}
+.card p{margin:0 0 1rem;color:var(--muted)}
+.hashrow{display:flex;flex-wrap:wrap;gap:.75rem;align-items:flex-start;margin-bottom:1rem}
+code{font-family:ui-monospace,SFMono-Regular,Consolas,Menlo,monospace;font-size:.85rem;word-break:break-all;
+  background:var(--bg);border:1px solid var(--line);border-radius:.375rem;padding:.5rem .75rem;display:block}
+.hashrow code{flex:1 1 20rem}
+.copy{font:inherit;font-size:.9rem;font-weight:600;color:var(--ink);background:transparent;border:1px solid var(--line);
+  border-radius:.375rem;padding:.5rem 1rem;cursor:pointer}
+.copy:hover{background:var(--bg)}
+footer{border-top:1px solid var(--line);padding:1.5rem 0 2rem;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>VideoPr</header>
+
+  <main>
+    <div class="hero">
+      <h1>VideoPr for Windows is ready.</h1>
+      <p class="lead">Grab the installer, double-click it, and follow the prompts. That’s the whole setup.</p>
+      <div class="cta">
+        <a class="btn" id="dl" href="#" target="_blank" rel="noopener">Download VideoPr-Setup.exe</a>
+        <p class="note">
+          <svg width="56" height="34" viewBox="0 0 56 34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M54 26C40 6 20 4 5 14"/><path d="M5 14l11-1M5 14l5 10"/></svg>
+          <span>it’s a big one, 174 MB</span>
+        </p>
+      </div>
+      <p class="msg" id="msg" role="status" hidden>The download link isn’t set up yet. Please check back soon.</p>
+      <p class="small">For Windows. The button opens MediaFire, where you click Download once more.</p>
+    </div>
+
+    <div class="timeline" aria-hidden="true">
+      <div class="row v1">
+        <span class="clip" style="left:0;width:22%"></span><span class="clip" style="left:24%;width:23%"></span>
+        <span class="clip" style="left:49%;width:22%"></span><span class="clip" style="left:73%;width:27%"></span>
+      </div>
+      <div class="row v2">
+        <span class="clip" style="left:8%;width:22%"></span><span class="clip" style="left:33%;width:22%"></span>
+        <span class="clip" style="left:60%;width:32%"></span>
+      </div>
+      <div class="row a1">
+        <span class="clip" style="left:0;width:40%"></span><span class="clip" style="left:42%;width:58%"></span>
+      </div>
+      <div class="playhead"></div>
+    </div>
+
+    <section>
+      <h2>How to install it</h2>
+      <ol>
+        <li>Click the button. Your browser saves <strong>VideoPr-Setup.exe</strong>.</li>
+        <li>Open it from your Downloads folder.</li>
+        <li>Click through the installer, then start VideoPr.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Want to check the file first?</h2>
+      <div class="card">
+        <p>Every file has a fingerprint called a SHA-256 hash. If yours matches this one, it’s the same file we published.</p>
+        <div class="hashrow">
+          <code id="hash">3c9cf62847801a5c5b0b198841535b4637dd2226db6e1a9a4067583c9fcbfcc3</code>
+          <button class="copy" id="copy" type="button">Copy hash</button>
+        </div>
+        <p>To see the hash of your download, open PowerShell in the folder with the installer and run:</p>
+        <code>Get-FileHash .\VideoPr-Setup.exe -Algorithm SHA256</code>
+      </div>
+    </section>
+  </main>
+
+  <footer>VideoPr-Setup.exe, 182,489,862 bytes</footer>
+</div>
+
+<script>
+// Paste the full link to the hosted installer here (for example a GitHub Releases or cloud storage link).
+var DOWNLOAD_URL = "https://www.mediafire.com/file/lw2utc19e3k6ood/VideoPr-Setup.exe/file";
+
+var dl = document.getElementById("dl"), msg = document.getElementById("msg");
+if (DOWNLOAD_URL) { dl.href = DOWNLOAD_URL; }
+dl.addEventListener("click", function (e) {
+  if (!DOWNLOAD_URL) { e.preventDefault(); msg.hidden = false; }
+});
+
+var copyBtn = document.getElementById("copy"), hash = document.getElementById("hash");
+copyBtn.addEventListener("click", function () {
+  var done = function () {
+    copyBtn.textContent = "Copied";
+    setTimeout(function () { copyBtn.textContent = "Copy hash"; }, 1800);
+  };
+  try {
+    navigator.clipboard.writeText(hash.textContent.trim()).then(done, select);
+  } catch (err) { select(); }
+  function select() {
+    var r = document.createRange(); r.selectNodeContents(hash);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+  }
+});
+</script>
+</body>
+</html>
